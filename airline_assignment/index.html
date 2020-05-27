@@ -76,7 +76,7 @@
         
             result[d.AirlineID] = currentData
             //TODO: Save the updated information in the dictionary using the airline id as key.
-            console.log(result)
+            //console.log(result)
             return result;
             }, {})
 
@@ -93,7 +93,7 @@
             let routes = store.routes
         // Compute the number of routes per airline.
         let airlines = groupByAirline(store.routes);
-        console.log(airlines)
+        //console.log(airlines)
         }
         
         loadData().then(showData);
