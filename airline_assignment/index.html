@@ -68,7 +68,7 @@
             let currentData = result[d.AirlineID] || {
                 "AirlineID": d.AirlineID,
                 "AirlineName": d.AirlineName,
-                "Count": 0
+                "Count": 0;
             }
         
             currentData.Count += 1 
@@ -77,6 +77,7 @@
             result[d.AirlineID] = currentData
             //TODO: Save the updated information in the dictionary using the airline id as key.
             //console.log(result)
+                console.log(Count)
             return result;
             }, {})
 
@@ -85,7 +86,7 @@
             result = result.sort((a,b) => { return d3.descending(a.Count, b.Count)})
             //TODO: Sort the data in descending order of count.
 
-            return result
+            return result;
         }
         
         function showData() {
