@@ -73,7 +73,7 @@
         
             currentData.Count += 1 
                 //TODO: Increment the count (number of routes) of ariline.
-            //console.log(currentData)
+ 
             result[d.AirlineID] = currentData
             //TODO: Save the updated information in the dictionary using the airline id as key.
             //console.log(result)
@@ -94,7 +94,8 @@
             let routes = store.routes
         // Compute the number of routes per airline.
         let airlines = groupByAirline(store.routes);
-        console.log(airlines)
+        //console.log(airlines)
+            console.log(routes)
         }
         
         loadData().then(showData);
