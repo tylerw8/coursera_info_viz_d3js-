@@ -68,16 +68,16 @@
             let currentData = result[d.AirlineID] || {
                 "AirlineID": d.AirlineID,
                 "AirlineName": d.AirlineName,
-                "Count": 0;
+                "Count": 0
             }
         
             currentData.Count += 1 
                 //TODO: Increment the count (number of routes) of ariline.
-        
+        console.log(Count)
             result[d.AirlineID] = currentData
             //TODO: Save the updated information in the dictionary using the airline id as key.
             //console.log(result)
-                console.log(Count)
+                
             return result;
             }, {})
 
