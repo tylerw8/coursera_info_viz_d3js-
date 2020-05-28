@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color:powderblue;">
+<body style="background-color:yellow">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -199,7 +199,8 @@
             //`translate(${margin.left}px,${height - margin.bottom}px,${margin.top}px)`  y axis removed     
             //`translate(${height - margin.bottom}px)` This puts the y axis in the top right corner.
             //`translate(${height - margin.top}px)' The chart disappears.
-            `translate(${margin.left}px,${height + margin.top}px)'
+            //`translate(${margin.left}px,${height + margin.top}px)'The chart disappears.
+            `translate(${margin.left}px,${height - margin.right}px)'
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
