@@ -168,8 +168,8 @@
             bars.enter().append("rect")
             .attr("height", yScale.bandwidth())
             .attr("y", (d) => yScale(d.AirlineName))
-            //.attr("width", (d) => xScale(d.Count))
-            .attr("width", (d) => xScale(airlines, d => d.Count))
+            .attr("width", (d) => xScale(d.Count))
+            //.attr("width", (d) => xScale(airlines, d => d.Count))
             //TODO: set the width of the bar to be proportional to the airline count using the xScale
             .attr("fill", "#2a5599")
         }
