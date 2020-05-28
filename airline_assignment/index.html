@@ -194,17 +194,7 @@
             //TODO: Create an axis on the left for the Y scale
         container.append("g")
             .style("transform", 
-            //`translate(${height - margin.bottom}px,${margin.top}px)` This puts the labels in the correct position but on the right side of the chart not the left
-            //`translate(${height - margin.bottom}px,${margin.left}px)` This kept the y axis on the right side but moved it to the bottom.
-            //`translate(${margin.left}px,${height - margin.bottom}px,${margin.top}px)`  y axis removed     
-            //`translate(${height - margin.bottom}px)` This puts the y axis in the top right corner.
-            //`translate(${height - margin.top}px)' The chart disappears.
-            //`translate(${margin.left}px,${height + margin.top}px)'The chart disappears.
-            //`translate(${margin.left}px,${height - margin.right}px)' The chart disappears.
-            //`translate(${margin.left}px,${height - margin.bottom}px)` Labels below x axis left side.
-            //`translate(${margin.left}px,${height + margin.bottom}px)` labels gone but chart is there.
-            //`translate(${margin.left}px,${height - margin.top}px)` Label is several pixels below the x axis.
-            `translate(${margin.left}px,${margin.top}px)`       
+            `translate(${margin.left}px,${margin.top}px)`  //This works.     
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
