@@ -194,10 +194,10 @@
 
         let axisY = d3.axisLeft(yScale)
             //TODO: Create an axis on the left for the Y scale
-        container.append("g")
-            .style("transform", 
-            `translate(${margin.left}px,${height - margin.bottom}px)`
-            )    
+        //container.append("g")
+            //.style("transform", 
+            //`translate(${margin.left}px,${height - margin.bottom}px)`
+            //)    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
         }
