@@ -195,7 +195,8 @@
             //TODO: Create an axis on the left for the Y scale
         container.append("g")
             .style("transform", 
-            `translate(${height - margin.bottom}px,${margin.top}px)`
+            //`translate(${height - margin.bottom}px,${margin.top}px)` This puts the labels in the correct position but on the right side of the chart not the left
+            `translate(${height - margin.bottom}px,${margin.left}px)`       
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
