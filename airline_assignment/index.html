@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color:orange">
+<body style="background-color:gainsboro">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -203,7 +203,8 @@
             //`translate(${margin.left}px,${height - margin.right}px)' The chart disappears.
             //`translate(${margin.left}px,${height - margin.bottom}px)` Labels below x axis left side.
             //`translate(${margin.left}px,${height + margin.bottom}px)` labels gone but chart is there.
-            `translate(${margin.left}px,${height - margin.top}px)`
+            //`translate(${margin.left}px,${height - margin.top}px)` Label is several pixels below the x axis.
+            `translate(${margin.left}px,${margin.top}px)`       
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
