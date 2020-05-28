@@ -169,7 +169,6 @@
             .attr("height", yScale.bandwidth())
             .attr("y", (d) => yScale(d.AirlineName))
             .attr("width", (d) => xScale(d.Count))
-            //.attr("width", (d) => xScale(airlines, d => d.Count))
             //TODO: set the width of the bar to be proportional to the airline count using the xScale
             .attr("fill", "#2a5599")
         }
@@ -196,7 +195,7 @@
             //TODO: Create an axis on the left for the Y scale
         container.append("g")
             .style("transform", 
-            `translate(${margin.left}px,${y - margin.bottom}px)`
+            `translate(${margin.left}px,${height - margin.bottom}px)`
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
