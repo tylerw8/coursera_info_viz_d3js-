@@ -135,7 +135,7 @@
         
         function getAirlinesChartScales(airlines, config) {
             let { bodyWidth, bodyHeight } = config;
-            let maximunCount = d3.max(airlines.Count)
+            let maximunCount = d3.max(airlines, d => d.Count)
                 //TODO: Use d3.max to get the highest Count value we have on the airlines list.
 
             let xScale = d3.scaleLinear()
