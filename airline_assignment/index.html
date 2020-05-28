@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color:royalblue">
+<body style="background-color:paleturquoise">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -201,7 +201,8 @@
             //`translate(${height - margin.top}px)' The chart disappears.
             //`translate(${margin.left}px,${height + margin.top}px)'The chart disappears.
             //`translate(${margin.left}px,${height - margin.right}px)' The chart disappears.
-            `translate(${margin.left}px,${height - margin.bottom}px)`
+            //`translate(${margin.left}px,${height - margin.bottom}px)` Labels below x axis left side.
+            `translate(${margin.left}px,${height + margin.bottom}px)`
             )    
             .call(axisY)
             //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
