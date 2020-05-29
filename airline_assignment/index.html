@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: green">
+<body style="background-color: orange">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -310,7 +310,7 @@
         
             let circles = container.selectAll("circle");
             //TODO: bind the airports to the circles using the .data method.
-                .data()
+                .data(airports)
             //TODO: for each new airport (hint: .enter)
                 .enter()
                 .append("circle")
