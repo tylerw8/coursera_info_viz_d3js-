@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="color: aqua">
+<body style="background: aqua">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -240,7 +240,7 @@
   
             container.selectAll("path").data(countries)
             .enter().append("path")
-            .attr("d", geoPath)//TODO: use the path generator to draw each country
+            .attr("d", d => path(d))//TODO: use the path generator to draw each country
             .attr("stroke", "#ccc")
             .attr("fill", "#eee")
         }
