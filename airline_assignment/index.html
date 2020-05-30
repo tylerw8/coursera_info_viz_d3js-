@@ -308,20 +308,21 @@
             let projection = getMapProjection(config) //get the projection
             let container = config.container; //get the container
         
-            let circles = container.selectAll("circle").data(airports)
+            let circles = container.selectAll("circle")
+                //.data(airports)
             //TODO: bind the airports to the circles using the .data method.
                 
             //TODO: for each new airport (hint: .enter)
-                .enter()
+                //.enter()
                 //.append("circle")
             //      - Set the radius to 1
-                .attr("r", 1)
+                //.attr("r", 1)
             //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
-                .attr("cx", d => projection([+d.Longitude, +d.Latitude])[0])
-                .attr("cy", d => projection([+d.Longitude, +d.Latitude])[1])
+                //.attr("cx", d => projection([+d.Longitude, +d.Latitude])[0])
+                //.attr("cy", d => projection([+d.Longitude, +d.Latitude])[1])
             
             //      - Set the fill color of the circle to  "#2a5599"
-                .attr("fill", "#2a5599")
+               // .attr("fill", "#2a5599")
         }
  
         function showData() {
