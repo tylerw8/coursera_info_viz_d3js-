@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: lavender">
+<body style="background-color: gainsboro">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -322,7 +322,7 @@
                 .attr("y", d => projection([+d.longitude, +d.latitude])[1])
             
             //      - Set the fill color of the circle to  "#2a5599"
-               // .attr("fill", "#2a5599")
+               .attr("fill", "#2a5599")
         }
  
         function showData() {
