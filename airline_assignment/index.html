@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: blue">
+<body style="background-color: bisque">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -308,8 +308,8 @@
             let projection = getMapProjection(config) //get the projection
             let container = config.container; //get the container, chart is visible map is not visible
         
-            let circles = container.selectAll("circle").data(airports); //removing this semicolon restored chart
-                //circles.data(airports)
+            let circles = container.selectAll("circle"); //removing this semicolon restored chart
+                data(airports)
             //TODO: bind the airports to the circles using the .data method.
                 
             //TODO: for each new airport (hint: .enter)
