@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: bisque">
+<body style="background-color: aqua">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -322,9 +322,10 @@
             //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
                 //.attr("x", d => projection([+d.SourceLongitude, +d.SourceLatitude])[0])
                 //.attr("y", d => projection([+d.SourceLongitude, +d.SourceLatitude])[1])
-                .attr("x", d => projection("Longitude", "Latitude")[0])
-                .attr("y", d => projection("Longitude", "Latitude")[1])         
-               
+                .attr("dx", d => projection([+d.DestLongitude, +d.DestLatitude])[0])
+                .attr("dy", d => projection([+d.DestLongitude, +d.DestLatitude])[1])         
+                .attr("sx", d => projection([+d.SourceLongitude, +d.SourceLatitude])[0])
+                .attr("sy", d => projection([+d.SourceLongitude, +d.SourceLatitude])[1]) 
         }
  
         function showData() {
