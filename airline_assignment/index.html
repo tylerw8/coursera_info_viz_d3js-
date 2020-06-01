@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: coral">
+<body style="background-color: yellow">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -308,30 +308,32 @@
             let projection = getMapProjection(config) //get the projection
             let container = config.container; //get the container, chart is visible map is not visible
         
-            let circles = container.selectAll("circle"); //removing this semicolon restored chart
-                //circles.data(airports) //chart and map were there, but dots all at 0,0
+            let circles = container
+                .selectAll("circle") //removing this semicolon restored chart
+                .data(airports); //chart and map were there, but dots all at 0,0
                 //.data() //caused chart and map to disappear
                 //.data(data)// caused chart and map to disappear
                 //.data(airports) // caused chart and map to disappear
                 //.data(circles)
                 //airports.data(circles) // chart and map back but no airport dot
-                circles.data(d)
+                //circles.data(d) // didn't work
+            
             
             //TODO: bind the airports to the circles using the .data method.
                 
             //TODO: for each new airport (hint: .enter)
-                .enter()
+                circles.enter()
                 .append("circle")
             //      - Set the radius to 1
                 .attr("r", 30) // 
 
             //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
-                //.attr("cx", projection([d.Longitude, d.Latitude][0]))
-                //.attr("cy", projection([d.Longitude, d.Latitude][1]))
+                .attr("cx", projection([d.Longitude, d.Latitude][0]))
+                .attr("cy", projection([d.Longitude, d.Latitude][1]))
                 //.attr("x", d => projection([+d.Longitude, +d.Latitude])[0])
                 //.attr("y", d => projection([+d.Longitude, +d.Latitude])[1])
-                .attr("cx", d => projection([d.Longitude, d.Latitude])[0])
-                .attr("cy", d => projection([d.Longitude, d.Latitude])[1])
+                //.attr("cx", d => projection([d.Longitude, d.Latitude])[0])
+                //.attr("cy", d => projection([d.Longitude, d.Latitude])[1])
             
              //      - Set the fill color of the circle to  "#2a5599"
                 .attr("fill", "#2a5599")
