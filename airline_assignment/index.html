@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: azure">
+<body style="background-color: orchid">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -304,11 +304,11 @@
         }
         
         function drawAirports(airports) {
-            let config = getMapConfig() //get the config
+            let config = getMapConfig(); //get the config
             let projection = getMapProjection(config) //get the projection
-            let container = config.container //get the container
+            let container = config.container; //get the container
         
-            let circles = container.selectAll("circle")
+            let circles = container.selectAll("circle");
                 .data(airports)
             //TODO: bind the airports to the circles using the .data method.
                 
