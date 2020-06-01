@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: skyblue">
+<body style="background-color: olive">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -308,7 +308,7 @@
             let projection = getMapProjection(config) //get the projection
             let container = config.container; //get the container
         
-            let circles = container.selectAll("circle");
+            let circles = container.selectAll("circle")
                 .data(data)
             //TODO: bind the airports to the circles using the .data method.
                 
