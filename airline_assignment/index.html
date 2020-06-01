@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: cyan">
+<body style="background-color: brown">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -308,15 +308,15 @@
             let projection = getMapProjection(config) //get the projection
             let container = config.container; //get the container, chart is visible map is not visible
         
-            let circles = container.selectAll("circle"); //removing this semicolon restored chart
-                circles.data(airports)
+            let circles = container.selectAll("circle").data(airports); //removing this semicolon restored chart
+                //circles.data(airports)
             //TODO: bind the airports to the circles using the .data method.
                 
             //TODO: for each new airport (hint: .enter)
                 .enter()
                 .append("circle")
             //      - Set the radius to 1
-                .attr("r", 30)
+                .attr("r", 30) // 
 
             //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
                 //.attr("cx", projection([d.Longitude, d.Latitude][0]))
@@ -326,6 +326,8 @@
                 .attr("y", d => projection([+d.Longitude, +d.Latitude])[1])
              //      - Set the fill color of the circle to  "#2a5599"
                 .attr("fill", "#2a5599")
+            console.log("x")
+            console.log("y")
         }
  
         function showData() {
