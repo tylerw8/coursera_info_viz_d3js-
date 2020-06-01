@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: goldenrod">
+<body style="background-color: greenyellow">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -309,9 +309,9 @@
             let container = config.container; //get the container, chart is visible map is not visible
         
             let circles = container.selectAll("circle"); //removing this semicolon restored chart
-                //circles.data(airports)
-                .data()
-                //.data(data)
+                //circles.data(airports) //chart and map were there, but dots all at 0,0
+                //.data() //caused chart and map to disappear
+                .data(data)
                 //.data(airports)
                 //.data(d)
             
