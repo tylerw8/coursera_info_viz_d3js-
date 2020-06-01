@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: yellow">
+<body style="background-color: palevioletred">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -312,7 +312,9 @@
                 //circles.data(airports) //chart and map were there, but dots all at 0,0
                 //.data() //caused chart and map to disappear
                 //.data(data)// caused chart and map to disappear
-                .data(airports)
+                //.data(airports) // caused chart and map to disappear
+                .data(circles)
+                //airports.data(circles)
                 //.data(d)
             
             //TODO: bind the airports to the circles using the .data method.
