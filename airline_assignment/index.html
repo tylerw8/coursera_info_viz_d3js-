@@ -246,10 +246,10 @@
             .attr("fill", "#eee")
         }
         
-        function drawMap(geoJeon) {
+        function drawMap(geoJSON) {
             let config = getMapConfig();
             let projection = getMapProjection(config)
-            drawBaseMap(config.container, geoJeon.features, projection)
+            drawBaseMap(config.container, geoJSON.features, projection)
         }
         
         function showData() {
