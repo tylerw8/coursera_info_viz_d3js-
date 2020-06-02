@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: palegreen">
+<body>
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -341,6 +341,7 @@
 
             let airports = groupByAirport(store.routes);
             drawAirports(airports)
+            
         }
         
         // Week 4 - Part 6
@@ -373,20 +374,6 @@
                 bindedData.exit().remove();
         }
         
-        function showData() {
-            //Get the routes from our store variable
-            let routes = store.routes
-            // Compute the number of routes per airline.
-            let airlines = groupByAirline(store.routes);
-            console.log(airlines)
-            drawAirlinesChart(airlines)
-            drawMap(store.geoJSON)
-
-            let airports = groupByAirport(store.routes);
-            //drawAirports(airports)
-
-            drawRoutes("24") // <- add this line
-        }
         
         
     </script>
