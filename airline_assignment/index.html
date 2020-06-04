@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: blanchedalmond">
+<body style="background-color: paleturquoise">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -392,8 +392,8 @@
             drawMap(store.geoJSON)
 
             let airports = groupByAirport(store.routes);
-            drawAirports(airports)
-            //drawRoutes("24") // <- add this line
+            //drawAirports(airports)
+            drawRoutes("24") // <- add this line
         }
         
     </script>
