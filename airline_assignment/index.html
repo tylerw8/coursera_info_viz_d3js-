@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: cyan">
+<body style="background-color: beige">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -184,7 +184,7 @@
                 d3.select(this)
                     .attr("fill", "#992a5b")
                 
-                .call(drawRoutes(d.airlineID));
+                .call(drawRoutes(d.AirlineID));
             })
             
             //TODO: Add another listener, this time for mouseleave
