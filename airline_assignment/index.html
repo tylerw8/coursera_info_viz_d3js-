@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: cyan">
+<body>
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -163,36 +163,37 @@
             )
 
             let bars = body.selectAll(".bar")
-            .data(airlines)
             //TODO: Use the .data method to bind the airlines to the bars (elements with class bar)
+            .data(airlines)
 
             //Adding a rect tag for each airline
             bars.enter().append("rect")
             .attr("height", yScale.bandwidth())
             .attr("y", (d) => yScale(d.AirlineName))
-            .attr("width", (d) => xScale(d.Count))
+            
             //TODO: set the width of the bar to be proportional to the airline count using the xScale
+            .attr("width", (d) => xScale(d.Count)) 
             .attr("fill", "#2a5599")
         
             .on("mouseenter", function(d) { // <- this is the new code  
-                
-
-            //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
+                //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
                 d3.select(this)
-                    .attr("fill", "#992a5b")
-            
-                .call(drawRoutes(d.AirlineID));//TODO: call the drawRoutes function passing the AirlineID id 'd'   
+                    .attr("fill", "#992a5b") 
+                
+                //TODO: call the drawRoutes function passing the AirlineID id 'd'   
+                .call(drawRoutes(d.AirlineID));
                 
             })
             
             //TODO: Add another listener, this time for mouseleave
             .on("mouseleave", function(d) {
 
-            //TODO: change the fill color of the bar back to "#2a5599"
+                //TODO: change the fill color of the bar back to "#2a5599"
                 d3.select(this)
                     .attr("fill", "#2a5599")
                 
-                .call(drawRoutes(null));  //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
+                //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
+                .call(drawRoutes(null));  
                               
             })       
         }
