@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: aliceblue">
+<body style="background-color: rosybrown">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -380,7 +380,7 @@
             //TODO: set the opacity to 0.1
                 .attr("opacity", 0.1)
             //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter. 
-                .data(selectedRoutes).exit().remove();
+                .exit().remove();
                
         }
         
