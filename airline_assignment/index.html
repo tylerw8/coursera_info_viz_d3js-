@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: cornsilk">
+<body style="background-color: lavenderblush">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -174,24 +174,25 @@
             //TODO: set the width of the bar to be proportional to the airline count using the xScale
             .attr("fill", "#2a5599")
         
-            //.on("mouseenter", function(d) { // <- this is the new code
+            .on("mouseenter", function(d) { // <- this is the new code
             //TODO: call the drawRoutes function passing the AirlineID id 'd'
                 //.call(drawRoutes(AirlineID, 'd')) //didn't work
                 //.call(drawRoutes('d')) // didn't work
                 //.call(drawRoutes(result[d.AirlineID]))
-                //.call(drawRoutes(d.AirlineID))
+                .call(drawRoutes(d.AirlineID))
             //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
-                //d3.select(this)
-                  //  .attr("fill", "#992a5b")
-            //})
+                d3.select(this)
+                    .attr("fill", "#992a5b")
+            })
+            
             //TODO: Add another listener, this time for mouseleave
-            //.on("mouseleave", function(d) {
+            .on("mouseleave", function(d) {
             //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
-                //.call(drawRoutes(null))
+                .call(drawRoutes(null))
             //TODO: change the fill color of the bar back to "#2a5599"
-                //d3.select(this)
-                    //.attr("fill", "#2a5599")
-                //})       
+                d3.select(this)
+                    .attr("fill", "#2a5599")
+                })       
         }
         
         function drawAirlinesChart(airlines) {
@@ -391,8 +392,8 @@
             drawMap(store.geoJSON)
 
             let airports = groupByAirport(store.routes);
-            //drawAirports(airports)
-            drawRoutes("24") // <- add this line
+            drawAirports(airports)
+            //drawRoutes("24") // <- add this line
         }
         
     </script>
