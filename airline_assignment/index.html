@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: lavenderblush">
+<body style="background-color: aliceblue">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -177,9 +177,9 @@
             .on("mouseenter", function(d) { // <- this is the new code
             //TODO: call the drawRoutes function passing the AirlineID id 'd'
                 //.call(drawRoutes(AirlineID, 'd')) //didn't work
-                //.call(drawRoutes('d')) // didn't work
+                .call(drawRoutes('d')) // didn't work
                 //.call(drawRoutes(result[d.AirlineID]))
-                .call(drawRoutes(d.AirlineID))
+                //.call(drawRoutes(d.AirlineID))
             //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
                 d3.select(this)
                     .attr("fill", "#992a5b")
