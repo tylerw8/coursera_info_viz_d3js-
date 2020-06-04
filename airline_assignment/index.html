@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: blue">
+<body style="background-color: greenyellow">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -191,8 +191,8 @@
                 d3.select(this)
                     .attr("fill", "#2a5599")
                 
-                //.call(drawRoutes(null));
-              
+                .call(drawRoutes(null));
+               //container.selectAll("line").data(selectedRoutes).exit().remove();
             })       
         }
         
@@ -381,7 +381,7 @@
                 .attr("opacity", 0.1)
             //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter.
                 //bindedData.exit().remove();
-                container.selectAll("line").data(selectedRoutes).exit().remove();
+               
         }
         
         function showData() {
