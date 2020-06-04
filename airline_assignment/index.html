@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body>
+<body style="background-color: antiquewhite">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -181,8 +181,8 @@
                     .attr("fill", "#992a5b") 
                 
                 //TODO: call the drawRoutes function passing the AirlineID id 'd'   
-                .call(drawRoutes(d.AirlineID));
-                
+                //.call(drawRoutes(d.AirlineID));
+                drawRoutes(d.AirlineID)
             })
             
             //TODO: Add another listener, this time for mouseleave
@@ -193,7 +193,8 @@
                     .attr("fill", "#2a5599")
                 
                 //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
-                .call(drawRoutes(null));  
+                //.call(drawRoutes(null)); 
+                drawRoutes(null)
                               
             })       
         }
