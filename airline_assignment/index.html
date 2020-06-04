@@ -174,16 +174,12 @@
             //TODO: set the width of the bar to be proportional to the airline count using the xScale
             .attr("fill", "#2a5599")
         
-            .on("mouseenter", function(d) { // <- this is the new code
-            //TODO: call the drawRoutes function passing the AirlineID id 'd'
-                //.call(drawRoutes(AirlineID, 'd')) //didn't work
-                //.call(drawRoutes(d)) // 'd' didn't work
-                //.call(drawRoutes(result[d.AirlineID]))
-                
+            .on("mouseenter", function(d) { // <- this is the new code   
             //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
                 d3.select(this)
                     .attr("fill", "#992a5b")
-                
+            
+            //TODO: call the drawRoutes function passing the AirlineID id 'd'   
                 .call(drawRoutes(d.AirlineID));
             })
             
