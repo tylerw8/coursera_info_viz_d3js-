@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: greenyellow">
+<body style="background-color: green">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -179,7 +179,7 @@
                 //.call(drawRoutes(AirlineID, 'd')) //didn't work
                 //.call(drawRoutes(d)) // 'd' didn't work
                 //.call(drawRoutes(result[d.AirlineID]))
-                .call(drawRoutes(d.AirlineID))
+                //.call(drawRoutes(d.AirlineID))
             //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
                 d3.select(this)
                     .attr("fill", "#992a5b")
