@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: rosybrown">
+<body style="background-color: antiquewhite">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -367,7 +367,7 @@
                 .data(selectedRoutes, d => d.ID) //This second parameter tells D3 what to use to identify the routes, this hepls D3 to correctly find which routes have been added or removed.
     
             //TODO: Use the .enter selector to append a line for each new route.
-                .enter()
+                bindedData.enter()
                 .append("line")
             //TODO: for each line set the start of the line (x1 and y1) to be the position of the source airport (SourceLongitude and SourceLatitude) Hint: you can use projection to convert longitude and latitude to x and y.
                 .attr("x1", d => projection([+d.SourceLongitude, +d.SourceLatitude])[0])
@@ -380,7 +380,7 @@
             //TODO: set the opacity to 0.1
                 .attr("opacity", 0.1)
             //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter. 
-                .exit().remove();
+                bindedData.exit().remove();
                
         }
         
