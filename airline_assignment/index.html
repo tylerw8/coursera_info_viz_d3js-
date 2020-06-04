@@ -38,7 +38,7 @@
     <script src="d3.js"></script> <!-- Add this line to your file -->
 </head>
 
-<body style="background-color: lime">
+<body style="background-color: whitesmoke">
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
@@ -184,14 +184,14 @@
             })
             
             //TODO: Add another listener, this time for mouseleave
-            .on("mouseleave", function(null) {
+            .on("mouseleave", function(d) {
             //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
                
             //TODO: change the fill color of the bar back to "#2a5599"
                 d3.select(this)
                     .attr("fill", "#2a5599")
                 
-                .call(drawRoutes(d.AirlineID));
+                drawRoutes(null);
             })       
         }
         
